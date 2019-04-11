@@ -1,0 +1,23 @@
+<view class="weui-cells__title">表单</view>
+
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">满</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入金额"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">送</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入金额" />
+                </view>                
+            </view>                    
+        </view>
+        <view class="weui-cells__tips">如果不能提交</view>
+<button type='primary' bindtap='showTopTips'>提交</button>
+

@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/set/set",
+    "pages/service/service",
+    "pages/add/add"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "店长小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "我是店长",
+        "iconPath": "images/icon/btn-tabs_06.png",
+        "selectedIconPath": "images/icon/btn-tabs_10.png"
+      },
+      {
+        "pagePath": "pages/set/set",
+        "text": "设置",
+        "iconPath": "images/icon/btn-tabs_03.png",
+        "selectedIconPath": "images/icon/btn-tabs_08.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "测试",
+        "iconPath": "images/icon/btn-tabs_03.png",
+        "selectedIconPath": "images/icon/btn-tabs_08.png"
+      }
+    ]
+  }
+}
