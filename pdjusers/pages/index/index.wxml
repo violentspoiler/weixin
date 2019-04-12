@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="qrcode">
+    <canvas canvas-id="qrcode" />
+  </view> -->
+    <view class="usermotto">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+    <button type='primary' bindtap='loginweb' style='width: 100%;'>{{motto}}</button>
+  </view>
+  <view >{{cash}}</view>
+  <view  style="position:fixed; bottom:0;width: 750rpx;">
+<!-- <view style='margin:20rpx'>微信官方关注组件</view> -->
+  <attention
+    attention_type="weichat"
+    scenes_value="{{scenes_value}}"
+    attention_btn="关注"
+    attention_content="微信支付宝qq收款码合并为一个..."
+    attention_name="芝麻收款">
+  </attention>
+</view>
+
+</view>
