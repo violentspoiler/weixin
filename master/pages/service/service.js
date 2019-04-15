@@ -47,17 +47,23 @@ Page({
         if (res.code) {
           var service = that.data.service;     
           wx.request({
-            url: 'http://192.168.252.239:8084/wxservlet//Master',            
+            url: 'http://192.168.254.238:8084/wxservlet//Master',            
             data: {
               code: that.data.userId,
               method: that.data.method,
               cash: that.data.mscash
             },
-            success(res) {
+            success(res) {              
               console.log('ok')
               console.log('code=' + that.data.userId)
               console.log('cash=' + that.data.mscash)
               console.log('method=' + that.data.method)
+              wx.switchTab({
+                url: '../index/index'
+              })
+              // wx.navigateTo({
+              //   url: '../waitting/waitting?result='+ res.data,
+              // })
             },
             fail(res) {
               console.log('no')
@@ -66,6 +72,12 @@ Page({
               console.log('cash=' + that.data.cash)
               console.log('mscash=' + that.data.mscash)
               console.log('method=' + that.data.method)
+              wx.switchTab({
+                url: '../index/index'
+              })
+              // wx.navigateTo({
+              //   url: '../waitting/waitting?result=' + res.data,
+              // })
             }
           })          
         } else {
@@ -73,6 +85,7 @@ Page({
         }
       }
     })
+    
   },
   /**
    * 生命周期函数--监听页面加载 
