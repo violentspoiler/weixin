@@ -126,6 +126,17 @@ Page({
   },
   click: function(e){//点击展开
     this.launchlist(e.currentTarget.id);
+    var that=this;
+    var list=this.data.listdata;
+    for(var i = 0 , len=list.length; i<len;++i){
+      if(list[i].id==e.currentTarget.id){
+        this.setData({
+          freecath: list[i].freecath,
+          recharge: list[i].recharge,
+        })
+
+      }
+    }
   },
   submitit: function(e){//提交修改
     this.launchlist(e.currentTarget.id);
@@ -135,10 +146,12 @@ Page({
     for (var i = 0, len = list.length; i < len; ++i) {
     var listRkey = 'listdata[' + i + '].recharge'
     var listFkey = 'listdata[' + i + '].freecash'
+    var listHkey = 'listdata[' + i + '].hiddenchange'
       if (list[i].id == e.currentTarget.id) {
         that.setData({
           [listRkey]: this.data.recharge,
-          [listFkey]: this.data.freecath
+          [listFkey]: this.data.freecath,
+          [listHkey]: ![listHkey]
         })
       }
     }   
