@@ -44,6 +44,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    scene: "",
+    loginstate: false,
+    wechatsys: '',
   }
 })
